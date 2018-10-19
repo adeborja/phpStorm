@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <?php
+        require_once "cadenaDeTexto.php";
+
+        var $cadena = $_REQUEST['ucadena'];
+        echo $cadena;
+        var $palabra = "hay";
+        $textoEscrito = new cadenaDeTexto($cadena);
+
+        echo "e . $textoEscrito->vecesPalabra($palabra) . e";
+    ?>
+</body>
+</html>
