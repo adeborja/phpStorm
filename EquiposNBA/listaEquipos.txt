@@ -1,0 +1,8 @@
+INSERT INTO
+`Equipos`(`id`, `nombre`, `numeroJugadores`)
+VALUES
+(0,'Las Cabezas Lakers',0),
+(1,'Utrera Bulls',0),
+(2,'Quinto Centenario Warriors',0),
+(3,'Sevilla City Thunder',0),
+(4,'Dos Hermanas Wizards',0)
