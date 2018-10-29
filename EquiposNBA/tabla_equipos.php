@@ -9,6 +9,7 @@
 namespace constantesBBDD;
 class tabla_equipos
 {
+    const NOMBRE_TABLA = "Equipos";
     const ID = "id";
     const NOMBRE = "nombre";
     const NUMERO_JUGADORES = "numeroJugadores";
