@@ -20,7 +20,7 @@ $mysqli = $db->getConnection();
 $sql_query = "SELECT ". \constantesBBDD\tabla_equipos::ID . ", "
         . \constantesBBDD\tabla_equipos::NOMBRE . ", "
         . \constantesBBDD\tabla_equipos::NUMERO_JUGADORES . " "
-    ."FROM ". \constantesBBDD\tabla_equipos::NOMBRE_TABLA;
+    ." FROM ". \constantesBBDD\tabla_equipos::NOMBRE_TABLA;
 
 //Recoger los resultados al realizar la consulta
 $result = $mysqli->query($sql_query);
@@ -30,12 +30,12 @@ if($result->num_rows > 0)
 {
    echo '<table border=\"1\">';
    echo '<tr>';
-   echo '<td>'. $row[\constantesBBDD\tabla_equipos::ID] .'</td>';
-   echo '<td>'. $row[\constantesBBDD\tabla_equipos::NOMBRE] .'</td>';
-   echo '<td>'. $row[\constantesBBDD\tabla_equipos::NUMERO_JUGADORES] .'</td>';
+   echo '<td>'. \constantesBBDD\tabla_equipos::ID .'</td>';
+   echo '<td>'. \constantesBBDD\tabla_equipos::NOMBRE .'</td>';
+   echo '<td>'. \constantesBBDD\tabla_equipos::NUMERO_JUGADORES .'</td>';
    echo '<tr>';
 
-   while($row = $result.fetch_assoc())
+   while($row = $result->fetch_assoc())
    {
        echo '<tr>';
        echo '<td>'. $row[\constantesBBDD\tabla_equipos::ID] .'</td>';
