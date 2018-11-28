@@ -1,0 +1,206 @@
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "titulo": "Prueba 4",     "numpag": 87 }
+
+<> 2018-11-28T113221.200.json
+
+###
+
+POST http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{     "titulo": "Prueba 4",     "numpag": 87 }
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{     "titulo": "Prueba 4",     "numpag": 87 }
+
+<> 2018-11-28T113108.200.json
+
+###
+
+POST http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{     "titulo": "Prueba 4",     "numpag": 87 }
+
+<> 2018-11-28T113059.400.html
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Prueba 2","numpag":84}
+
+<> 2018-11-28T113022.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Prueba 2","numpag":84}
+
+<> 2018-11-28T113012.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Prueba 2","numpag":84}
+
+<> 2018-11-28T112951.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Prueba 2","numpag":84}
+
+<> 2018-11-28T112932.200.json
+
+###
+
+POST http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Prueba 2","numpag":84}
+
+<> 2018-11-28T112911.400.html
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Don Quijote de La Prueba","numpag":84}
+
+<> 2018-11-28T112836.200.json
+
+###
+
+POST http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+{"titulo":"Don Quijote de La Prueba","numpag":84}
+
+<> 2018-11-28T112816.400.html
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112644.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112543.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112538.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro/3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112537.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112536.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112535.200.json
+
+###
+
+GET http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112517.200.json
+
+###
+
+POST http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112447.400.html
+
+###
+
+POST http://biblioteca.devel:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112435.400.html
+
+###
+
+POST http://biblioteca.devel:8080+/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112432.400.html
+
+###
+
+POST http://localhost:8080/libro
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112414.404.html
+
+###
+
+POST http://localhost:8080/resources
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-28T112304.404.html
+
+###
+
