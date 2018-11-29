@@ -74,7 +74,7 @@ class LibroHandlerModel
     }
 
 
-    public function postLibro($libro)
+    public static function postLibro($libro)
     {
         $filasAfectadas = -1;
 
@@ -105,6 +105,74 @@ class LibroHandlerModel
         return $filasAfectadas;
 
     }
+
+
+    public static function deleteLibro($id)
+    {
+        $filasAfectadas = -1;
+
+        //Obtener una instancia de la base de datos
+        $db = DatabaseModel::getInstance();
+
+        //Abrir conexion con la base de datos
+        $db_conexion = $db->getConnection();
+
+        //Comprobar si la id existe en la base de datos
+        $valid = self::isValid($id);
+
+        //Si el id es valido o es null, entramos. Si es null, borra todos los libros
+        if($valid == true || $id == null)
+        {
+            //sentencia a utilizar
+            $sentencia = ("delete from libros");
+
+            //Si la id no es null, añadimos a la sentencia
+            if($id != null)
+            {
+                $sentencia = $sentencia . " where " . \ConstantesDB\ConsLibrosModel::COD . " = ?";
+            }
+
+            //sentencia preparada a partir de la anterior
+            $sentencia_preparada = $db_conexion->prepare($sentencia);
+
+            if($id != null)
+            {
+                $sentencia_preparada->bind_param('i', $id);
+            }
+
+            $sentencia_preparada->execute();
+
+            $filasAfectadas = $sentencia_preparada->affected_rows;
+        }
+
+        $db_conexion->close();
+
+        return $filasAfectadas;
+    }
+
+
+    public static function putLibro($libro)
+    {
+        $filasAfectadas = -1;
+
+        $db = DatabaseModel::getInstance();
+        $db_conexion = $db->getConnection();
+
+        $sentencia = ("update libros set titulo = ?, numpag = ? where codigo = ?");
+
+        $sentencia_preparada = $db_conexion->prepare($sentencia);
+
+        $sentencia_preparada->bind_param('sii', $libro->titulo, $libro->numpag, $libro->codigo);
+
+        $sentencia_preparada->execute();
+
+        $filasAfectadas = $sentencia_preparada->affected_rows;
+
+        $db_conexion->close();
+
+        return $filasAfectadas;
+    }
+
 
     //returns true if $id is a valid id for a book
     //In this case, it will be valid if it only contains

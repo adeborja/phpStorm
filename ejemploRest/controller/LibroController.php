@@ -70,4 +70,77 @@ class LibroController extends Controller
 
     }
 
+
+    public function manageDeleteVerb(Request $request)
+    {
+        $filasAfectadas = -1;
+        $id = null;
+        $code = null;
+        $response = null;
+
+        //if the URI refers to a libro entity, instead of the libro collection
+        if (isset($request->getUrlElements()[2])) {
+            $id = $request->getUrlElements()[2];
+        }
+
+        $filasAfectadas = LibroHandlerModel::deleteLibro($id);
+
+        if($filasAfectadas != 0)
+        {
+            $code = 200;
+        }
+        else
+        {
+            if(LibroHandlerModel::isValid($id))
+            {
+                $code = 404;
+            }
+            else
+            {
+                $code = 400;
+            }
+        }
+
+        $response = new Response($code, null, null, $request->getAccept());
+
+        $response->generate();
+
+    }
+
+
+    public function managePutVerb(Request $request)
+    {
+        $filasAfectadas = -1;
+        $id = null;
+        $code = null;
+        $response = null;
+
+
+        $libro = $request->getBodyParameters();
+
+        $filasAfectadas = LibroHandlerModel::putLibro($libro);
+
+        if($filasAfectadas == 1)
+        {
+            $code = 200;
+        }
+        else
+        {
+            $id = $libro->id;
+
+            if(LibroHandlerModel::isValid($id))
+            {
+                $code = 404;
+            }
+            else
+            {
+                $code = 400;
+            }
+        }
+
+        $response = new Response($code, null, null, $request->getAccept());
+
+        $response->generate();
+    }
+
 }

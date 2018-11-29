@@ -2,10 +2,18 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="3c09a054-1b2f-4def-ac71-750af362864d" name="Vagrant" url="http://biblioteca.devel:8080">
+      <webServer id="3c09a054-1b2f-4def-ac71-750af362864d" name="Vagrant (project level)" url="http://biblioteca.devel:8080">
         <fileTransfer host="biblioteca.devel" port="2222" rootFolder="/var/www/biblioteca.devel" accessType="SFTP">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+      <webServer id="0f23399c-8c99-481e-9e00-110ece619aba" name="biblioteca.devel" url="http://biblioteca.devel:8080">
+        <fileTransfer host="biblioteca.devel" port="2222" rootFolder="/var/www/biblioteca.devel" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
           <option name="port" value="2222" />
         </fileTransfer>
