@@ -1,0 +1,18 @@
+POST http://libro.api:8080/libro/
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "Don Quijote de Sevilla",         "codigo": 4,         "numpag": 894     }
+
+###
+
+POST http://libro.api:8080/libro/
+Accept: application/json
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "Don Quijote de Sevilla",         "codigo": 4,         "numpag": 894     }
+
+###
+

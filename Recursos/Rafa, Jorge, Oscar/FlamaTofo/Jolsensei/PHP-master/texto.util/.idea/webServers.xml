@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="ff77aa77-d25a-49f2-8e30-2a7224ed79f6" name="vagrant" url="http://texto.util">
+        <fileTransfer host="127.0.0.1" port="2222" rootFolder="/var/www/texto.util" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="2222" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

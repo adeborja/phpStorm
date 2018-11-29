@@ -1,0 +1,360 @@
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T072055.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071939.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071236-1.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071236.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071227.200.json
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071222.200.json
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071221.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071157.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T071155.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070646.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070528.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070413.200.json
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070358.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070134.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070111.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T070002.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T065915.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T065055.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T064922.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T064904.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T064903.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T064833.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T064325.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T064018.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T063813.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T063734.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T063733.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T063725.200.html
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T063607.200.json
+
+###
+
+GET http://libros.api:8080/persona/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-11-29T062323.200.html
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://libros.api:8080/persona
+Accept: */*
+Cache-Control: no-cache
+
+###
+

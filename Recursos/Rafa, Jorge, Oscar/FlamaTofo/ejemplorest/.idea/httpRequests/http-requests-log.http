@@ -1,0 +1,504 @@
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     }
+
+<> 2018-11-29T074822.200.json
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     }
+
+<> 2018-11-29T073626.200.json
+
+###
+
+POST http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     }
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     },
+
+<> 2018-11-29T073600.200.json
+
+###
+
+POST http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     },
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     },
+
+<> 2018-11-29T073536.200.json
+
+###
+
+POST http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{         "titulo": "estoinzerta",  "numpag": 0     },
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-29T073342.200.json
+
+###
+
+GET http://libros.api:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-29T073337.200.json
+
+###
+
+GET http://PruebaRest:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-29T073330.404.html
+
+###
+
+GET http://PruebaRest:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-29T073329.404.html
+
+###
+
+GET http://PruebaRest:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-11-29T073216.404.html
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999&minpag=99999999&minpag=99999999&minpag=999&minpag=999&minpag=999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T113010.200.json
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999&minpag=99999999&minpag=99999999&minpag=999&minpag=999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T112249.200.html
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999&minpag=99999999&minpag=99999999&minpag=999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T112150.200.html
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999&minpag=99999999&minpag=99999999&minpag=999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999&minpag=99999999&minpag=99999999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999&minpag=99999999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro/pag=300
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro?minpag=99999999
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T095514.200.json
+
+###
+
+GET http://libros.api:8080/libro/minpag=300
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro/minpag=300
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro/minpag=300
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro/minpag=300
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro/minpag=300
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T070416.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "MiguelAngel", "codigo": 34,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T065559.200.json
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T065011.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T064805.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 78,  "numpag": 99999999     }
+
+<> 2018-11-28T064542.200.html
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T064055.200.json
+
+###
+
+DELETE http://libros.api:8080/libro/3
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T064039.200.json
+
+###
+
+GET http://libros.api:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T064034.200.json
+
+###
+
+GET http://libros.api:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T063917.200.json
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T063842.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T063720.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T063458.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T063214.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T062938.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T062613.200.html
+
+###
+
+PUT http://libros.api:8080/libro
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlam0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T062505.200.html
+
+###
+
+GET http://libros.api:8080/libro/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlama0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T062156.200.json
+
+###
+
+GET http://libros.api:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlama0", "codigo": 2,  "numpag": 99999999     }
+
+<> 2018-11-28T062140.200.json
+
+###
+
+PUT http://libros.api:8080/libro/2
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "ActualizoFlama0", "codigo": 2,  "numpag": 99999999     }
+
+###
+
+GET http://libros.api:8080/libro/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+ {         "titulo": "GorgeExpon30", "codigo": 0,  "numpag": 99999999     }
+
+<> 2018-11-28T060715.200.json
+
+###
+
