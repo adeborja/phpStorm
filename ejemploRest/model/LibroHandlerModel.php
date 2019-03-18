@@ -46,9 +46,12 @@ class LibroHandlerModel
             if ($id != null) {
                 $prep_query->bind_param('s', $id);
             }
+            else{
+                $listaLibros = array();
+            }
 
             $prep_query->execute();
-            $listaLibros = array();
+            //$listaLibros = array();
 
             //IMPORTANT: IN OUR SERVER, I COULD NOT USE EITHER GET_RESULT OR FETCH_OBJECT,
             // PHP VERSION WAS OK (5.4), AND MYSQLI INSTALLED.
@@ -59,7 +62,15 @@ class LibroHandlerModel
             while ($prep_query->fetch()) {
                 $tit = utf8_encode($tit);
                 $libro = new LibroModel($cod, $tit, $pag);
-                $listaLibros[] = $libro;
+
+                if($id != null)
+                {
+                    $listaLibros = $libro;
+                }
+                else
+                {
+                    $listaLibros[] = $libro;
+                }
             }
 
 //            $result = $prep_query->get_result();
