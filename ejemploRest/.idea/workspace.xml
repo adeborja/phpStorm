@@ -16,7 +16,7 @@
       <file leaf-file-name="LibroController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/LibroController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-18">
+            <state relative-caret-position="306">
               <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
               <folding />
             </state>
@@ -26,8 +26,8 @@
       <file leaf-file-name="LibroModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/LibroModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+            <state relative-caret-position="1314">
+              <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,18 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-466">
-              <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="115">
+              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Request.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Request.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1296">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,13 +56,13 @@
       <file leaf-file-name="LibroHandlerModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/LibroHandlerModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+            <state relative-caret-position="-882">
+              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
               <folding>
-                <marker date="1552905883827" expanded="true" signature="3316:3364" ph="insert into libros... " />
-                <marker date="1552905883827" expanded="true" signature="4488:4506" ph="delete from " />
-                <marker date="1552905883827" expanded="true" signature="4494:4506" ph="insert into libros... " />
-                <marker date="1552905883827" expanded="true" signature="5362:5419" ph="update libro... " />
+                <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+                <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+                <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+                <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
               </folding>
             </state>
           </provider>
@@ -82,7 +92,11 @@
   </component>
   <component name="PhpServers">
     <servers>
-      <server host="biblioteca.devel" id="60c9520d-af4d-4432-843a-e20433070b48" name="biblioteca.devel" port="8080" use_path_mappings="true" />
+      <server host="biblioteca.devel" id="60c9520d-af4d-4432-843a-e20433070b48" name="biblioteca.devel" port="8080" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/var/www/biblioteca.devel" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
   <component name="PhpWebServerValidation" deployment_server_id="0f23399c-8c99-481e-9e00-110ece619aba" path_to_validation_script="$PROJECT_DIR$" selected_validation_type="REMOTE" web_path_to_validation_script="http://127.0.0.1/" />
@@ -163,14 +177,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/Descargas/pruebaretrofitjava/macasado-pruebaretrofitjava-3a64fe4428ea/pruebaRetrofitJava" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="settings.php.debug.servers" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -650,11 +664,13 @@
       <workItem from="1543480394338" duration="3997000" />
       <workItem from="1543566216896" duration="5644000" />
       <workItem from="1552901576006" duration="2931000" />
+      <workItem from="1552909252944" duration="364000" />
+      <workItem from="1554106142812" duration="4124000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17844000" />
+    <option name="totallyTimeSpent" value="22332000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -668,17 +684,17 @@
   <component name="ToolWindowManager">
     <frame x="0" y="-2" width="1366" height="770" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17715959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27891654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1934033" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1934033" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39730135" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -697,11 +713,85 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/controller/LibroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LibroModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LibroHandlerModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+          <folding>
+            <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+            <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/LibroController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LibroModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1314">
+          <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/LibroHandlerModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+            <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/LibroController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2124">
@@ -731,10 +821,10 @@
         <state relative-caret-position="2862">
           <caret line="159" column="0" lean-forward="true" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
-            <marker date="1552905883827" expanded="true" signature="3316:3364" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="4488:4506" ph="delete from " />
-            <marker date="1552905883827" expanded="true" signature="4494:4506" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="5362:5419" ph="update libro... " />
+            <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+            <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
           </folding>
         </state>
       </provider>
@@ -752,10 +842,10 @@
         <state relative-caret-position="1620">
           <caret line="90" column="65" lean-forward="false" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
           <folding>
-            <marker date="1552905883827" expanded="true" signature="3316:3364" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="4488:4506" ph="delete from " />
-            <marker date="1552905883827" expanded="true" signature="4494:4506" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="5362:5419" ph="update libro... " />
+            <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+            <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
           </folding>
         </state>
       </provider>
@@ -781,10 +871,10 @@
         <state relative-caret-position="1620">
           <caret line="90" column="65" lean-forward="true" selection-start-line="90" selection-start-column="65" selection-end-line="90" selection-end-column="65" />
           <folding>
-            <marker date="1552905883827" expanded="true" signature="3316:3364" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="4488:4506" ph="delete from " />
-            <marker date="1552905883827" expanded="true" signature="4494:4506" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="5362:5419" ph="update libro... " />
+            <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+            <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
           </folding>
         </state>
       </provider>
@@ -844,14 +934,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2585">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -859,39 +941,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-466">
-          <caret line="11" column="7" lean-forward="false" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/LibroModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="73" column="20" lean-forward="true" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
+        <state relative-caret-position="1314">
+          <caret line="73" column="20" lean-forward="false" selection-start-line="73" selection-start-column="20" selection-end-line="73" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controller/LibroController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18">
+        <state relative-caret-position="306">
           <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1296">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/LibroHandlerModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="50" column="13" lean-forward="true" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        <state relative-caret-position="-882">
+          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding>
-            <marker date="1552905883827" expanded="true" signature="3316:3364" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="4488:4506" ph="delete from " />
-            <marker date="1552905883827" expanded="true" signature="4494:4506" ph="insert into libros... " />
-            <marker date="1552905883827" expanded="true" signature="5362:5419" ph="update libro... " />
+            <marker date="1554106912125" expanded="true" signature="3316:3364" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="4488:4506" ph="delete from " />
+            <marker date="1554106912125" expanded="true" signature="4494:4506" ph="insert into libros... " />
+            <marker date="1554106912125" expanded="true" signature="5362:5419" ph="update libro... " />
           </folding>
         </state>
       </provider>

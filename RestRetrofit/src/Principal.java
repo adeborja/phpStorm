@@ -35,6 +35,9 @@ public class Principal {
 		Retrofit retrofit;
 		LibroCallback libroCallback = new LibroCallback();
 		ListaLibroCallback listaLibroCallback = new ListaLibroCallback();
+		PostLibroCallback postLibroCallback = new PostLibroCallback();
+		DeleteLibroCallback deleteLibroCallback = new DeleteLibroCallback();
+		PutLibroCallback putLibroCallback = new PutLibroCallback();
 		
 		retrofit = new Retrofit.Builder()
 							   .baseUrl(SERVER_URL)
@@ -56,8 +59,17 @@ public class Principal {
         /*Libro l = new Libro();
         l.setTitulo("libro retrofit");
         l.setNumpag("50");
-        libroInter.postLibro(l).enqueue(libroCallback);*/
-        libroInter.postLibro("libro post", 0, "55").enqueue(libroCallback);
+        libroInter.postLibro(l).enqueue(postLibroCallback);*/
+
+        //libroInter.deleteLibro(17).enqueue(deleteLibroCallback);
+
+		libroInter.deleteLibro().enqueue(deleteLibroCallback);
+
+		/*Libro l = new Libro();
+		l.setTitulo("libro retrofit modificado");
+		l.setNumpag("503");
+		l.setCodigo(17);
+		libroInter.putLibro(l.getCodigo(), l).enqueue(putLibroCallback);*/
 
 	}
 

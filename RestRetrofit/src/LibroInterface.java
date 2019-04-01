@@ -11,9 +11,19 @@ public interface LibroInterface {
 	@GET("/libro")
 	Call<List<Libro>> getLibro();
 
-	@POST("/libro")
-    @FormUrlEncoded
-    Call<Libro> postLibro(@Field("titulo") String titulo, @Field("codigo") int codigo, @Field("numpag") String numpag);
-    //Call<Libro> postLibro(@Body Libro libro);
+	@POST("/libro")// /?XDEBUG_SESSION_START=PHPSTORM") //esto es para depurar en phpstorm
+	@Headers({ "Content-Type: application/json"})
+    Call<Void> postLibro(@Body Libro libro);
+
+	@DELETE("/libro/{codigo}")
+    Call<Void> deleteLibro(@Path("codigo") int codigo);
+
+	//Mejor no añadirlo por seguridad. Raramente quieres borrarlo tod o.
+	@DELETE("/libro")
+    Call<Void> deleteLibro();
+
+	@PUT("/libro/{codigo}")
+    @Headers({ "Content-Type: application/json"})
+    Call<Void> putLibro(@Path("codigo") int codigo, @Body Libro libro);
 
 }
