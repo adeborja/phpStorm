@@ -61,12 +61,19 @@ if (isset($_SERVER['HTTP_ACCEPT'])) {
     $accept = $_SERVER['HTTP_ACCEPT'];
 }
 
-
+//TODO: mirar la siguiente pagina para lo del Authorization
+//https://stackoverflow.com/questions/40582161/how-to-properly-use-bearer-tokens
+//Este objeto tiene todos los datos mandados en la peticion (usuario, cuerpo, etc)
 $req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept);
 
 
 // route the request to the right place
+//Aqui se puede especificar que objeto (Libro, Capitulo, etc) se acepta y cual no, o en $verb
 $controller_name = ucfirst($url_elements[1]) . 'Controller';
+
+//TODO: comprobar en $req donde esta el campo Authorization para coger los datos y comprobar que sean correctos
+
+//Si el usuario es correcto, se hace lo siguiente
 if (class_exists($controller_name)) {
     $controller = new $controller_name();
     $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
@@ -78,6 +85,8 @@ else {
     $controller = new NotFoundController();
     $controller->manage($req); //We don't care about the HTTP verb
 }
+//Si no es correcto,
+
 
 //DEBUG / TESTING:
 //echo "<br/>URL_ELEMENTS:" ;
