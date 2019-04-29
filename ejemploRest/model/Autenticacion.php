@@ -1,5 +1,8 @@
 <?php
 
+define('__ROOT__', dirname(dirname(__FILE__)));
+require_once(__ROOT__.'/Request.php');
+
 /**
  * Created by PhpStorm.
  * User: adeborja
@@ -21,8 +24,34 @@ class Autenticacion
         //Comprobar que usuario y contraseña sean correctos
         //TODO: revisar lo de almacenamiento de contraseñas para decidir el mejor modelo
 
+        $respuesta = false;
+
+        if($str_array[0] == 'angel' && $str_array == 'asd')
+        {
+            $respuesta = true;
+        }
+        else
 
 
-        return true;
+        return $respuesta;
+    }
+
+    /*public static function validarUsuario($user, $pass)
+    {
+        $valido = false;
+
+        if($user == 'angel' && $pass == 'asd') $valido = true;
+
+        return $valido;
+    }*/
+
+    public static function validarUsuario($req)
+    {
+        $valido = false;
+
+
+        if($req->getUsuario() == 'angel' && $req->getContrasena() == 'asd') $valido = true;
+
+        return $valido;
     }
 }

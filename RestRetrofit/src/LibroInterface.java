@@ -8,8 +8,11 @@ public interface LibroInterface {
 	@GET("/libro/{codigo}")
 	Call<Libro> getLibro(@Path("codigo") int codigo);
 
-	@GET("/libro")
-	Call<List<Libro>> getLibro();
+	@GET("/libro?XDEBUG_SESSION_START=PHPSTORM")
+	//@Headers({ "Authorization: Basic YW5nZWw6YXNk"})
+	//@Headers({ "Authorization: Basic {auth}"})
+	Call<List<Libro>> getLibro(@Header("Authorization") String auth);
+	//TODO: ahora hay que hacer las clases necesarias para el manejo de usuarios, igual que con libros
 
 	@POST("/libro")// /?XDEBUG_SESSION_START=PHPSTORM") //esto es para depurar en phpstorm
 	@Headers({ "Content-Type: application/json"})

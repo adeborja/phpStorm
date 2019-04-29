@@ -12,7 +12,10 @@ class Request
     //in $accept we store the format of the content that the server will send
     private $accept;
 
-    public function __construct($verb, $url_elements, $query_string, $body, $content_type, $accept)
+    private $usuario;
+    private $contrasena;
+
+    public function __construct($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena)
     {
         $this->verb = $verb;
         $this->url_elements = $url_elements;
@@ -33,6 +36,9 @@ class Request
                 $this->accept = 'unsupported';
                 break;
         }
+
+        $this->usuario = $usuario;
+        $this->contrasena = $contrasena;
 
 
         return true;
@@ -167,5 +173,37 @@ class Request
     {
         $this->accept = $accept;
     }
+
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * @param mixed $usuario
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+    }
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getContrasena()
+    {
+        return $this->contrasena;
+    }
+
+    /**
+     * @param mixed $contrasena
+     */
+    public function setContrasena($contrasena)
+    {
+        $this->contrasena = $contrasena;
+    }
+
 
 }

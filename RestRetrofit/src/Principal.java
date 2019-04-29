@@ -45,6 +45,7 @@ public class Principal {
 							   .build();
 		
 		LibroInterface libroInter = retrofit.create(LibroInterface.class);
+		String auth = "YW5nZWw6YXNk";
 
 		//con android
         //https://code.tutsplus.com/es/tutorials/sending-data-with-retrofit-2-http-client-for-android--cms-27845
@@ -53,7 +54,7 @@ public class Principal {
         //https://stackoverflow.com/questions/28371305/no-retrofit-annotation-found-parameter-1
 		
 		//libroInter.getLibro(1).enqueue(libroCallback);
-		//libroInter.getLibro().enqueue(listaLibroCallback);
+		libroInter.getLibro("Basic "+auth).enqueue(listaLibroCallback);
 
 
         /*Libro l = new Libro();
@@ -63,7 +64,7 @@ public class Principal {
 
         //libroInter.deleteLibro(17).enqueue(deleteLibroCallback);
 
-		libroInter.deleteLibro().enqueue(deleteLibroCallback);
+		//libroInter.deleteLibro().enqueue(deleteLibroCallback);
 
 		/*Libro l = new Libro();
 		l.setTitulo("libro retrofit modificado");

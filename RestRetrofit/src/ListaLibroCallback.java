@@ -38,11 +38,20 @@ public class ListaLibroCallback implements Callback<List<Libro>>{
 	code = resp.code();
 	message = resp.message();
 	isSuccesful = resp.isSuccessful();
-	
-	for(Libro libro:list)
-    {
-        System.out.println(libro.getCodigo()+" "+libro.getTitulo()+" "+libro.getNumpag());
-    }
+
+
+	if(isSuccesful)
+	{
+		for(Libro libro:list)
+		{
+			System.out.println(libro.getCodigo()+" "+libro.getTitulo()+" "+libro.getNumpag());
+		}
+	}
+	else
+	{
+		System.out.println(code+" "+message);
+	}
+
 
 
 
