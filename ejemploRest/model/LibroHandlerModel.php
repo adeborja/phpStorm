@@ -79,7 +79,7 @@ class LibroHandlerModel
 //                $listaLibros[$i] = $row;
 //            }
         }
-        $db_connection->close();
+        $db->closeConnection();
 
         return $listaLibros;
     }
@@ -111,7 +111,7 @@ class LibroHandlerModel
         $filasAfectadas = $sentencia_preparada->affected_rows;
 
         //cerrar la conexion
-        $db_conexion->close();
+        $db->closeConnection();
 
         return $filasAfectadas;
 
@@ -156,7 +156,7 @@ class LibroHandlerModel
             $filasAfectadas = $sentencia_preparada->affected_rows;
         }
 
-        $db_conexion->close();
+        $db->closeConnection();
 
         return $filasAfectadas;
     }
@@ -179,7 +179,7 @@ class LibroHandlerModel
 
         $filasAfectadas = $sentencia_preparada->affected_rows;
 
-        $db_conexion->close();
+        $db->closeConnection();
 
         return $filasAfectadas;
     }

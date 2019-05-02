@@ -72,7 +72,6 @@ if(isset($_SERVER['PHP_AUTH_USER']))
 }
 
 
-//TODO: mirar la siguiente pagina para lo del Authorization
 //https://stackoverflow.com/questions/40582161/how-to-properly-use-bearer-tokens
 //Este objeto tiene todos los datos mandados en la peticion (usuario, cuerpo, etc)
 $req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena);
@@ -82,9 +81,8 @@ $req = new Request($verb, $url_elements, $query_string, $body, $content_type, $a
 //Aqui se puede especificar que objeto (Libro, Capitulo, etc) se acepta y cual no, o en $verb
 $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
-//TODO: comprobar en $req donde esta el campo Authorization para coger los datos y comprobar que sean correctos
 
-//$valido = Autenticacion::validarUsuario($usuario, $contrasena);
+//$valido = Autenticacion::validarUsuarioBasico($usuario, $contrasena);
 $valido = Autenticacion::validarUsuario($req);
 if($valido)
 {

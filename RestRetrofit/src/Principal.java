@@ -38,6 +38,7 @@ public class Principal {
 		PostLibroCallback postLibroCallback = new PostLibroCallback();
 		DeleteLibroCallback deleteLibroCallback = new DeleteLibroCallback();
 		PutLibroCallback putLibroCallback = new PutLibroCallback();
+
 		
 		retrofit = new Retrofit.Builder()
 							   .baseUrl(SERVER_URL)
@@ -45,7 +46,18 @@ public class Principal {
 							   .build();
 		
 		LibroInterface libroInter = retrofit.create(LibroInterface.class);
-		String auth = "YW5nZWw6YXNk";
+
+		//CREAR USUARIO
+		PostUsuarioCallback postUsuarioCallback = new PostUsuarioCallback();
+		UsuarioInterface usuarioInter = retrofit.create(UsuarioInterface.class);
+
+		Usuario u = new Usuario();
+		u.setUsername("angel");
+		u.setPassword("asd");
+
+		usuarioInter.postUsuario(u).enqueue(postUsuarioCallback);
+
+
 
 		//con android
         //https://code.tutsplus.com/es/tutorials/sending-data-with-retrofit-2-http-client-for-android--cms-27845
@@ -54,7 +66,8 @@ public class Principal {
         //https://stackoverflow.com/questions/28371305/no-retrofit-annotation-found-parameter-1
 		
 		//libroInter.getLibro(1).enqueue(libroCallback);
-		libroInter.getLibro("Basic "+auth).enqueue(listaLibroCallback);
+		/*String auth = "YW5nZWw6YXNk";
+		libroInter.getLibro("Basic "+auth).enqueue(listaLibroCallback);*/
 
 
         /*Libro l = new Libro();
