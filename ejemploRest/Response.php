@@ -11,6 +11,7 @@ class Response
 
     // will receive the response code (200 by default), an associative array with the headers, the data for the body,
     // and the format to output the body (retrieved from the request that the client made)
+    //TODO: añadir authorization en headers
     public function __construct($code = '200', $headers = null, $body = null, $format = 'json')
     {
         $this->code = $code;

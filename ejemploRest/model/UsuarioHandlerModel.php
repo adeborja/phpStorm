@@ -107,10 +107,16 @@ class UsuarioHandlerModel
         //ejecutar la sentencia
         $sentencia_preparada -> execute();
 
-        $lineas = $sentencia_preparada->affected_rows;
+        $lineas = 0;
+
+        if($sentencia_preparada->affected_rows == 1)
+        {
+            $lineas = 1;
+        }
 
         //cerrar la conexion
         $db->closeConnection();
+        //$db_conexion->close();
 
         return $lineas;
     }

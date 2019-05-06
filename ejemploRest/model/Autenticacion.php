@@ -50,48 +50,53 @@ class Autenticacion
         $valido = false;
 
 
-        //if($req->getUsuario() == 'angel' && $req->getContrasena() == 'asd') $valido = true;
-
-        //Abrir conexion con la base de datos
-        $db = DatabaseModel::getInstance();
-        $db_connection = $db->getConnection();
-
-        //Preparar la sentencia que mandamos a la base de datos
-        $query = "SELECT " //. \ConsUsuarioModel::ID . ","
-            //. \ConsUsuarioModel::USER . ","
-            . \ConsUsuarioModel::PASS .
-            " FROM " . \ConsUsuarioModel::TABLE_NAME .
-            " WHERE " . \ConsUsuarioModel::USER . " = ?";
-
-
-
-        $prep_query = $db_connection->prepare($query);
-
-
-        //$aux = $req->usuario;
-        $aux = $req->getUsuario();
-        if($aux != null)
+        //TODO: añadir inspeccion de token en $req, no solo el usuario
+        if($req->getUsuario()!=null)
         {
-            $prep_query->bind_param('s', $aux);
+            //Abrir conexion con la base de datos
+            $db = DatabaseModel::getInstance();
+            $db_connection = $db->getConnection();
+
+            //Preparar la sentencia que mandamos a la base de datos
+            $query = "SELECT "
+                . \ConsUsuarioModel::PASS .
+                " FROM " . \ConsUsuarioModel::TABLE_NAME .
+                " WHERE " . \ConsUsuarioModel::USER . " = ?";
+
+
+
+            $prep_query = $db_connection->prepare($query);
+
+
+            //$aux = $req->usuario;
+            $nombre_usuario = $req->getUsuario();
+            if($nombre_usuario != null)
+            {
+                $prep_query->bind_param('s', $nombre_usuario);
+            }
+
+
+
+            $prep_query->execute();
+
+            $prep_query->bind_result($pass);
+
+            while ($prep_query->fetch())
+            {
+                //if($pass != null) $pass_hash = utf8_encode($pass); //no es necesario
+                if($pass != null || password_verify($req->getContrasena(), $pass))
+                {
+                    $valido = true;
+                }
+            }
+
+            /*if($pass != null || password_verify($req->getContrasena(), $pass_hash))
+            {
+                $valido = true;
+            }*/
+
+            $db->closeConnection();
         }
-
-
-
-        $prep_query->execute();
-
-        $prep_query->bind_result($pass);//, $pass);
-
-        while ($prep_query->fetch())
-        {
-            $pass_hash = utf8_encode($pass);
-        }
-
-        if(password_verify($req->getContrasena(), $pass_hash))
-        {
-            $valido = true;
-        }
-
-        $db->closeConnection();
 
 
         return $valido;

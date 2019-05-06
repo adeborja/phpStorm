@@ -84,7 +84,7 @@ $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
 //$valido = Autenticacion::validarUsuarioBasico($usuario, $contrasena);
 $valido = Autenticacion::validarUsuario($req);
-if($valido)
+if($valido || ($url_elements[1] == "usuario" && $verb == "POST"))
 {
     //Si el usuario es correcto, se hace lo siguiente
     if (class_exists($controller_name)) {
