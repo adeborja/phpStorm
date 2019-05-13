@@ -5,7 +5,7 @@ require_once "Controller.php";
 
 class LibroController extends Controller
 {
-    public function manageGetVerb(Request $request)
+    public function manageGetVerb(Request $request, $token = null)
     {
 
         $listaLibros = null;
@@ -13,35 +13,55 @@ class LibroController extends Controller
         $response = null;
         $code = null;
 
-        //if the URI refers to a libro entity, instead of the libro collection
-        if (isset($request->getUrlElements()[2])) {
-            $id = $request->getUrlElements()[2];
+        //Primero comprobar si el token es valido en caso de haberlo
+        /*$token_valido = false;
+        $token_decodificado = null;
+        if($token != null)
+        {
+            $token_decodificado = \Firebase\JWT\JWT::decode($token, $key, array('HS256'));
+
+            $fechaToken = $token_decodificado["iat"];
+            $fechaActual = strtotime("now");
+
+            if($fechaActual<$fechaToken) $token_valido = true;
         }
 
 
-        $listaLibros = LibroHandlerModel::getLibro($id);
-
-        if ($listaLibros != null) {
-            $code = '200';
-
-        } else {
-
-            //We could send 404 in any case, but if we want more precission,
-            //we can send 400 if the syntax of the entity was incorrect...
-            if (LibroHandlerModel::isValid($id)) {
-                $code = '404';
-            } else {
-                $code = '400';
+        if($token == null || $token_valido)
+        {*/
+            //if the URI refers to a libro entity, instead of the libro collection
+            if (isset($request->getUrlElements()[2])) {
+                $id = $request->getUrlElements()[2];
             }
 
-        }
 
-        $response = new Response($code, null, $listaLibros, $request->getAccept());
-        $response->generate();
+            $listaLibros = LibroHandlerModel::getLibro($id);
 
+            if ($listaLibros != null) {
+                $code = '200';
+
+            } else {
+
+                //We could send 404 in any case, but if we want more precission,
+                //we can send 400 if the syntax of the entity was incorrect...
+                if (LibroHandlerModel::isValid($id)) {
+                    $code = '404';
+                } else {
+                    $code = '400';
+                }
+
+            }
+
+            //$header_auth = header("Authorization: Bearer "+$token);
+            $header_auth = array( "Authorization" => "Bearer " . $token);
+
+            //$response = new Response($code, null, $listaLibros, $request->getAccept());
+            $response = new Response($code, $header_auth, $listaLibros, $request->getAccept());
+            $response->generate();
+        //}
     }
 
-    public function managePostVerb(Request $request)
+    public function managePostVerb(Request $request, $token = null)
     {
 
         //Obtener los parametros mandados en el body
@@ -71,7 +91,7 @@ class LibroController extends Controller
     }
 
 
-    public function manageDeleteVerb(Request $request)
+    public function manageDeleteVerb(Request $request, $token = null)
     {
         $filasAfectadas = -1;
         $id = null;
@@ -108,7 +128,7 @@ class LibroController extends Controller
     }
 
 
-    public function managePutVerb(Request $request)
+    public function managePutVerb(Request $request, $token = null)
     {
         $filasAfectadas = -1;
         $id = null;

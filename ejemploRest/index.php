@@ -64,17 +64,39 @@ if (isset($_SERVER['HTTP_ACCEPT'])) {
 
 $usuario = null;
 $contrasena = null;
-if(isset($_SERVER['PHP_AUTH_USER']))
+/*if(isset($_SERVER['PHP_AUTH_USER']))
 {
     $usuario = $_SERVER['PHP_AUTH_USER'];
 
     $contrasena = $_SERVER['PHP_AUTH_PW'];
+}*/
+
+$token_req = null;
+if(isset($_SERVER['HTTP_AUTHORIZATION']))
+{
+    $clave = explode(' ', $_SERVER['HTTP_AUTHORIZATION']);
+
+    switch ($clave[0])
+    {
+        case "Basic":
+            $usuario = $_SERVER['PHP_AUTH_USER'];
+
+            $contrasena = $_SERVER['PHP_AUTH_PW'];
+            break;
+
+        case "Bearer":
+            $token_req = $clave[1];
+            break;
+    }
+
+
 }
+
 
 
 //https://stackoverflow.com/questions/40582161/how-to-properly-use-bearer-tokens
 //Este objeto tiene todos los datos mandados en la peticion (usuario, cuerpo, etc)
-$req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena);
+$req = new Request($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena, $token_req);
 
 
 // route the request to the right place
@@ -83,14 +105,17 @@ $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
 
 //$valido = Autenticacion::validarUsuarioBasico($usuario, $contrasena);
-$valido = Autenticacion::validarUsuario($req);
-if($valido || ($url_elements[1] == "usuario" && $verb == "POST"))
+//$valido = Autenticacion::validarUsuario($req);
+$token = Autenticacion::validarUsuarioDevuelveToken($req);
+
+//if($valido || ($url_elements[1] == "usuario" && $verb == "POST"))
+if($token != null || ($url_elements[1] == "usuario" && $verb == "POST"))
 {
     //Si el usuario es correcto, se hace lo siguiente
     if (class_exists($controller_name)) {
         $controller = new $controller_name();
         $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
-        $controller->$action_name($req);
+        $controller->$action_name($req, $token);
         //$result = $controller->$action_name($req);
         //print_r($result);
     } //If class does not exist, we will send the request to NotFoundController

@@ -1,3 +1,6 @@
+#Linea para habilitar HTTP_AUTHORIZATION
+SetEnvIf Authorization .+ HTTP_AUTHORIZATION=$0
+
 #AcceptPathInfo On
 
 #Prevent directory browsing

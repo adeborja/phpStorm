@@ -14,8 +14,9 @@ class Request
 
     private $usuario;
     private $contrasena;
+    private $token;
 
-    public function __construct($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena)
+    public function __construct($verb, $url_elements, $query_string, $body, $content_type, $accept, $usuario, $contrasena, $token)
     {
         $this->verb = $verb;
         $this->url_elements = $url_elements;
@@ -39,6 +40,8 @@ class Request
 
         $this->usuario = $usuario;
         $this->contrasena = $contrasena;
+
+        $this->token = $token;
 
 
         return true;
@@ -204,6 +207,23 @@ class Request
     {
         $this->contrasena = $contrasena;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * @param mixed $token
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+    }
+
 
 
 }
