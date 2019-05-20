@@ -106,10 +106,48 @@ $controller_name = ucfirst($url_elements[1]) . 'Controller';
 
 //$valido = Autenticacion::validarUsuarioBasico($usuario, $contrasena);
 //$valido = Autenticacion::validarUsuario($req);
-$token = Autenticacion::validarUsuarioDevuelveToken($req);
 
 //if($valido || ($url_elements[1] == "usuario" && $verb == "POST"))
-if($token != null || ($url_elements[1] == "usuario" && $verb == "POST"))
+//if($token != null || ($url_elements[1] == "usuario" && $verb == "POST"))
+
+
+try
+{
+    $token = Autenticacion::validarUsuarioDevuelveToken($req);
+
+    if(token != null || ($url_elements[1] == "usuario" && $verb == "POST"))
+    {
+        //Si el usuario es correcto, se hace lo siguiente
+        if (class_exists($controller_name)) {
+            $controller = new $controller_name();
+            $action_name = 'manage' . ucfirst(strtolower($verb)) . 'Verb';
+            $controller->$action_name($req, $token);
+            //$result = $controller->$action_name($req);
+            //print_r($result);
+        } //If class does not exist, we will send the request to NotFoundController
+        else {
+            $controller = new NotFoundController();
+            $controller->manage($req); //We don't care about the HTTP verb
+        }
+    }
+//Si no es correcto, mandar error 401
+    else {
+        $controller = new NotAuthorizedController();
+        $controller->manage($req); //We don't care about the HTTP verb
+    }
+}
+catch (Exception $e)
+{
+    $controller = new ErrorController();
+    $controller->manage($req, $e->getMessage());
+}
+
+
+
+
+/*$token = Autenticacion::validarUsuarioDevuelveToken($req);
+
+if(!is_numeric($token) || ($url_elements[1] == "usuario" && $verb == "POST"))
 {
     //Si el usuario es correcto, se hace lo siguiente
     if (class_exists($controller_name)) {
@@ -126,9 +164,22 @@ if($token != null || ($url_elements[1] == "usuario" && $verb == "POST"))
 }
 //Si no es correcto, mandar error 401
 else {
-    $controller = new NotAuthorizedController();
-    $controller->manage($req); //We don't care about the HTTP verb
-}
+    if(!is_numeric($token))
+    {
+        $controller = new NotAuthorizedController();
+        $controller->manage($req); //We don't care about the HTTP verb
+    }
+    else
+    {
+        $mensaje = null;
+        switch ($token)
+        {
+            case 50:
+                $mensaje = "El token no esta activo";
+                break;
+        }
+    }
+}*/
 
 
 //DEBUG / TESTING:

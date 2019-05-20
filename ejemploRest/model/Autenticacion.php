@@ -23,7 +23,6 @@ class Autenticacion
         $str_array = explode(":", $cadena);
 
         //Comprobar que usuario y contraseña sean correctos
-        //TODO: revisar lo de almacenamiento de contraseñas para decidir el mejor modelo
 
         $respuesta = false;
 
@@ -51,7 +50,6 @@ class Autenticacion
         $valido = false;
 
 
-        //TODO: añadir inspeccion de token en $req, no solo el usuario
         if($req->getUsuario()!=null)
         {
             //Abrir conexion con la base de datos
@@ -109,6 +107,8 @@ class Autenticacion
 
     public static function validarUsuarioDevuelveToken($req)
     {
+        $key = "4N631";
+
         $token = $req->getToken();
         $jwt = null;
 
@@ -125,21 +125,43 @@ class Autenticacion
 
         if($token != null)
         {
-            //Lo comentado no es necesario porque el token de por si ya comprueba si issuedAt es valido
-            $token_decodificado = JWT::decode($token, $key, array('HS256'));
+            try
+            {
+                //Lo comentado no es necesario porque el token de por si ya comprueba si issuedAt es valido
+                $token_decodificado = JWT::decode($token, $key, array('HS256'));
 
-            /*$fechaToken = $token_decodificado["iat"];
-            $fechaActual = strtotime("now");
-
-            if($fechaActual<$fechaToken) //$token_valido = true;
-            {*/
                 //Se genera un nuevo token
                 $jwt = self::generarToken();
-            //}
+            }
+            catch (Exception $e)
+            {
+                throw $e;
+            }
+
+            /*catch (BeforeValidException $e)
+            {
+                $jwt = 50; //Codigo que indica que el token no es valido todavia
+            }
+            catch (ExpiredException $e)
+            {
+                $jwt = 51; //Codigo que indica que el token ha expirado
+            }
+            catch (SignatureInvalidException $e)
+            {
+                $jwt = 52; //Codigo que indica que el token no tiene firma valida
+            }
+            catch (Exception $e)
+            {
+                $jwt = 53; //Indica que ha ocurrido cualquier otro error
+            }*/
+
+
+
+
+
         }
         else
         {
-            //TODO: añadir inspeccion de token en $req, no solo el usuario
             if($req->getUsuario()!=null)
             {
                 //Abrir conexion con la base de datos
@@ -173,7 +195,7 @@ class Autenticacion
                 while ($prep_query->fetch())
                 {
                     //if($pass != null) $pass_hash = utf8_encode($pass); //no es necesario
-                    if($pass != null || password_verify($req->getContrasena(), $pass))
+                    if($pass != null && password_verify($req->getContrasena(), $pass))
                     {
                         //Aquí se genera el token
                         $jwt = self::generarToken();
@@ -194,7 +216,7 @@ class Autenticacion
 
         $token = array(
             "iat" => strtotime("now"),
-            "exp" => strtotime("+1 hour")
+            "exp" => strtotime("+5 seconds")
         );
 
         $jwt = JWT::encode($token, $key);
